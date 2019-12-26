@@ -1,0 +1,25 @@
+<div>
+    <div class="p-grid">
+        <div class="p-col-12">
+            <label id = "text_login">LOGIN</label>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" placeholder = "Username" size="30" pInputText> 
+            </span>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <input id="float-input" type="text" placeholder = "Password" size="30" pInputText> 
+            </span>
+        </div>
+        <div class="p-col-12">
+            <button (click)="navigateProgram()" pButton class="ui-button-rounded ui-button-secondary" label="LOGIN" style="margin-top : 20px; width : 12%"></button>
+        </div>
+        <div class="p-col-12">
+                <a (click)="changeState()"><label style="color : whitesmoke; font-size: 16px;">Register</label></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a (click)="changeStateForget()"><label style="color : whitesmoke; font-size: 16px;">Forget Password</label></a>
+        </div>
+    </div>
+</div>

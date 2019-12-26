@@ -1,0 +1,13 @@
+<ngx-flip [flip]="currentState" class="login_form">
+    <div front>
+        <app-login (emitState) = "emitState($event)" (stateFlip) = "emitStateFlip($event)"></app-login>
+    </div>
+    <div back>
+        <div *ngIf="stateFlip === 'register'">
+            <app-register (emitState) = "emitStateRegis($event)"></app-register>
+        </div>
+        <div *ngIf="stateFlip === 'forget'">
+            <app-forget-password (emitState) = "emitStateForget($event)"></app-forget-password>
+        </div>
+    </div>
+</ngx-flip>

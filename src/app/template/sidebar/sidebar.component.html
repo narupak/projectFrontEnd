@@ -1,0 +1,23 @@
+<div style="width:3%; height : 100%; background-color: black;">
+    <button style="border-radius: 80px; margin-left: 10px; margin-top: 50px;" (click)="sideBar()">
+        <i style="font-size: 50px;" class="pi pi-bars"></i>
+    </button>
+    <br><br><br><br><br><br>
+    <p-sidebar [(visible)]="display" [style]="{width:'10em'}">
+    <button style="border-radius: 80px;">
+        <i style="font-size: 50px;" class="pi pi-user"></i>
+    </button>
+    <br><br>
+    <button style="border-radius: 80px;">
+        <i style="font-size: 50px; " class="pi pi-bell"></i>
+    </button>
+    <br><br>
+    <button style="border-radius: 80px;">
+        <i style="font-size: 50px;" class="pi pi-paperclip"></i>
+    </button>
+    <br><br>
+    <button style="border-radius: 80px;">
+        <i style="font-size: 50px; " class="pi pi-image"></i>
+    </button>
+    </p-sidebar>
+</div>
