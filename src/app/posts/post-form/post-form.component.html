@@ -1,0 +1,37 @@
+<h2 class="p-col-12" style="color: lightslategray">Blog Post Form</h2>
+<hr/>
+<div class="ui-g">
+    <div class="col-md-4"> 
+    <app-post-form-image 
+    [image] = "model.image"
+    (imageChange)="changeImage($event)">
+    </app-post-form-image>
+            <div class="form-group">
+                    <label>titel</label>
+                    <input
+                    type="text"
+                    name="title"
+                    [(ngModel)]="model.title"
+                    class="form-control"
+                    placeholder="Title" />
+                </div>
+                <div class="form-group">
+                        <label>Content</label>
+                        <textarea
+                        name= "Content"
+                        [(ngModel)]="model.content"
+                        rows="5"
+                        class="form-control"
+                        placeholder="Content">
+                    </textarea>
+                </div>
+                <div class="col-md-8" style="color: white">
+                <form (submit)="createPost()">
+                <button type="submit" class="btn btn-primary float-xs-right">Create</button>
+            </form>
+            </div> 
+                </div> 
+     
+    
+</div> 
+
