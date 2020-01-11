@@ -1,0 +1,23 @@
+
+    <button pButton type="button" class="style" label="เข้าสู่ระบบ/ลงทะเบียน" routerLink="/auth/login"
+    class="ui-button-rounded ui-button-warning" style="margin-right: 4px;"></button>
+<p-dialog header="ติดต่อสำนักงาน" [(visible)]="display">
+    <div class="p-col-12 " style="text-align: center;">
+        เบอร์โทร : 0-3739-1295
+    </div>
+    <div class="p-col-12">
+        อีเมล์ : nayok004@hotmail.com
+    </div>
+</p-dialog>
+<button type="button" (click)="showDialog()" pButton icon="pi pi-info-circle"
+    class="ui-button-rounded ui-button-info" label="ติดต่อ"></button>
+<div class="p-grid">
+
+<div class="p-col-12" style="text-align: center;">
+    <img src=".\assets\Icon.png" width="140px" />
+</div>
+
+<div class="p-col-12" style="text-align: center;">
+    <img src=".\assets\agre.png" width="50%" />
+</div>
+</div>

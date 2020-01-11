@@ -1,21 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { LoginComponent } from './login/login/login.component';
-import { AuthComponent } from './auth.component';
-import { RegisterComponent } from './register/register.component';
-
-import { FlipModule } from 'ngx-flip';
-import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { FormsModule } from '@angular/forms';
-import {KeyFilterModule} from 'primeng/keyfilter';
-
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { FlipModule } from "ngx-flip";
+import { ButtonModule } from "primeng/button";
+import { InputTextModule } from "primeng/inputtext";
+import { KeyFilterModule } from "primeng/keyfilter";
+import { RadioButtonModule } from "primeng/radiobutton";
+import { AuthComponent } from "./auth.component";
+import { ForgetPasswordComponent } from "./forget-password/forget-password.component";
+import { MainComponent } from './main/main.component';
+import { RouterModule } from '@angular/router';
+import { TemplateModule } from '../template/template.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, RegisterComponent, ForgetPasswordComponent],
+  declarations: [
+    AuthComponent,
+    ForgetPasswordComponent,
+    MainComponent,
+  ],
   imports: [
     CommonModule,
     InputTextModule,
@@ -23,7 +26,10 @@ import {KeyFilterModule} from 'primeng/keyfilter';
     FlipModule,
     RadioButtonModule,
     FormsModule,
-    KeyFilterModule
+    KeyFilterModule,
+    RouterModule,
+    TemplateModule,
+    ReactiveFormsModule
   ]
 })
-export class AuthModule { }
+export class AuthModule {}

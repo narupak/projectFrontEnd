@@ -1,0 +1,22 @@
+<div class="p-col-12 topbar">
+    <div class="topbar-sub">
+            <div class="p-col-6">
+                <img src=".\assets\Icon.png" width="70px" style="margin-left: 2%;"/>
+            </div>
+            <div [ngSwitch]="stateTopbar" class="p-col-6">
+                <div *ngSwitchCase="'auth'" >
+                    <input type="text">
+                    &nbsp;
+                    <input type="text">
+                    &nbsp;
+                    <button type = "button" routerLink="/webapp">Login</button>
+                </div>
+                <div *ngSwitchCase="'kaset'" >
+                    <p>เกษตรอำเภอองครักษ์></p>
+                    <div class="p-col-12 ui-submenu-icon tabManu" style="text-align: center;">
+                        <p-tabMenu [model]="items"></p-tabMenu>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

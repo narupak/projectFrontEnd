@@ -1,0 +1,62 @@
+<div class="p-col-12 regis" [formGroup] = "formRegister">
+    <div class="p-grid">
+        <div class="p-col-12">
+            <label style="color:black; font-size: 40px;">ลงทะเบียน</label>
+        </div>
+        <div class="p-col-12">
+            <img src="./assets/1698572.png" width ="100px">
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <input style="margin-right: 10px;" id="float-input" type="text" placeholder="ชื่อ" size="15" formControlName="firstName" pInputText>
+                <input id="float-input" type="text" placeholder="นามสกุล" size="15" formControlName="lastName" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <label class="fontregis" style="margin-right: 40px;">เพศ</label>
+            <p-radioButton class="fontregis" name="group2" value="W" label="หญิง"  formControlName="gender" inputId="preopt1">
+            </p-radioButton>
+            <p-radioButton class="fontregis" name="group2" value="M" label="ชาย"  formControlName="gender" inputId="preopt2">
+            </p-radioButton>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <i class="pi pi-envelope" style="color: black;"></i>
+                &nbsp;
+                <input id="float-input" type="text" placeholder="อีเมล์" formControlName="email" size="30" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <i class="pi pi-mobile" style="color: black;"></i>
+                &nbsp;
+                <input id="float-input" type="text" pKeyFilter="num" placeholder="เบอร์โทรศัพท์" size="30" maxlength="10" formControlName="tel" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <i class="pi pi-user" style="color: black;"></i>
+                &nbsp;
+                <input id="float-input" type="text" placeholder="ชื่อผู้ใช้" size="30" formControlName="username" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <i class="pi pi-lock-open" style="color: black;"></i>
+                &nbsp;
+                <input id="float-input" type="password" placeholder="รหัสผ่าน" size="30" formControlName="password" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <span class="ui-float-label">
+                <i class="pi pi-lock" style="color: black;"></i>
+                &nbsp;
+                <input id="float-input" type="password" placeholder="ยืนยันรหัสผ่าน" size="30" pInputText>
+            </span>
+        </div>
+        <div class="p-col-12">
+            <button pButton type="button" (click)="register()" class="ui-button-secondary" label="ลงทะเบียน" style="margin-top : 20px; 
+            margin-right: 10px; width : 11%;" ></button>
+        </div>
+    </div>
+</div>

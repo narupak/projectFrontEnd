@@ -46,4 +46,8 @@ export class AuthComponent implements OnInit {
     this.stateFlip = event;
   }
 
+  stateTopbar(event){
+    console.log(event);
+  }
+
 }

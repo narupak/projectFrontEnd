@@ -18,10 +18,8 @@ body {
         // text-align: center;
     }
     #float-input {
-        border: none;
         background-color: transparent;
-        border-bottom: 1px solid whitesmoke;
-        color: whitesmoke;
+        border-bottom: 1px solid black;
     }
     #text_login {
         color: white;
@@ -29,8 +27,19 @@ body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     input::placeholder {
-        color: whitesmoke;
+        color: grey;
         opacity: 1;
+    }
+    .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem .ui-menuitem-link {
+        background-color: black;
+    }
+
+    .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem .ui-menuitem-link .ui-menuitem-text{
+        color: white !important;
+    }
+
+    .ui-tabmenu .ui-tabmenu-nav{
+        border-bottom: none !important;
     }
     // .form_input.voted{
     //     transform: rotateY(360deg);
