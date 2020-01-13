@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { TemplateModule } from './template/template.module';
 import { WebappModule } from './webapp/webapp.module';
-import { ApiService } from './shared/api.service';
+import { ApiService } from './shared/service/api.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

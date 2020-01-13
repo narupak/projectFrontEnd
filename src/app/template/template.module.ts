@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { MenuModule } from 'primeng/menu';
 import {TabMenuModule} from 'primeng/tabmenu';
+import { ReactiveFormsModule } from '@angular/forms';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {TabMenuModule} from 'primeng/tabmenu';
     ButtonModule,
     RouterModule,
     TabMenuModule,
-    MenuModule
+    MenuModule,
+    ReactiveFormsModule,
+    InputTextModule
   ],
   exports: [TopbarComponent]
 })

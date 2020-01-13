@@ -4,12 +4,12 @@
                 <img src=".\assets\Icon.png" width="70px" style="margin-left: 2%;"/>
             </div>
             <div [ngSwitch]="stateTopbar" class="p-col-6">
-                <div *ngSwitchCase="'auth'" >
-                    <input type="text">
+                <div *ngSwitchCase="'auth'" [formGroup] = "formLogin">
+                    <input type="text" formControlName = "username" pInputText>
                     &nbsp;
-                    <input type="text">
+                    <input type="password" formControlName = "password" pInputText>
                     &nbsp;
-                    <button type = "button" routerLink="/webapp">Login</button>
+                    <button type = "button" (click) = "login()" >Login</button>
                 </div>
                 <div *ngSwitchCase="'kaset'" >
                     <p>เกษตรอำเภอองครักษ์></p>

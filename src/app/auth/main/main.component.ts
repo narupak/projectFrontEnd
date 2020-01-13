@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/shared/api.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { ApiService } from 'src/app/shared/service/api.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -17,18 +17,21 @@ export class MainComponent implements OnInit {
   }
 
   register(){
-    this.apiService.register(this.formRegister.getRawValue()).subscribe();
+    if(this.formRegister.valid){
+      this.apiService.register(this.formRegister.getRawValue()).subscribe();
+      this.formRegister.reset()
+    }
   }
 
   initForm(){
     this.formRegister = new FormGroup({
-      username : new FormControl(null),
-      password : new FormControl(null),
-      firstName : new FormControl(null),
-      lastName : new FormControl(null),
-      tel : new FormControl(null),
-      email : new FormControl(null),
-      gender : new FormControl(null)
+      username : new FormControl(null , Validators.required),
+      password : new FormControl(null , Validators.required),
+      firstName : new FormControl(null , Validators.required),
+      lastName : new FormControl(null , Validators.required),
+      tel : new FormControl(null , Validators.required),
+      email : new FormControl(null , Validators.required),
+      gender : new FormControl(null , Validators.required)
     })
   }
 
