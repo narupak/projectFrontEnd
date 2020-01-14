@@ -1,4 +1,4 @@
-
+<!-- 
     <button pButton type="button" class="style" label="เข้าสู่ระบบ/ลงทะเบียน" routerLink="/auth/login"
     class="ui-button-rounded ui-button-warning" style="margin-right: 4px;"></button>
 <p-dialog header="ติดต่อสำนักงาน" [(visible)]="display">
@@ -20,4 +20,22 @@
 <div class="p-col-12" style="text-align: center;">
     <img src=".\assets\agre.png" width="50%" />
 </div>
+</div> -->
+<div [ngSwitch]="apiService.program" class="p-col-12">
+    <div *ngSwitchCase="'home'">
+        <app-home></app-home>
+    </div>
+    <div *ngSwitchCase="'about'">
+        <app-about></app-about>
+    </div>
+    <div *ngSwitchCase="'personnal'">
+        <app-personnal></app-personnal>
+    </div>
+    <div *ngSwitchCase="'contact'">
+        <app-contact></app-contact>
+    </div>
+    <div *ngSwitchCase="'formRegister'">
+        <app-register-form></app-register-form>
+    </div>
 </div>
+

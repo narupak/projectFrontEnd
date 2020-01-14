@@ -6,6 +6,7 @@ export class ApiService {
 
   constructor(private http : HttpClient) { }
   public token : string;
+  public program : string = 'home';
 
   register(payload){
     payload = {

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api/menuitem';
+import { ApiService } from 'src/app/shared/service/api.service';
 
 @Component({
   selector: 'app-program',
@@ -12,7 +13,7 @@ export class ProgramComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,public apiService : ApiService) { }
   display: boolean = false;
 
   information() {

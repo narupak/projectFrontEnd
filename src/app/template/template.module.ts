@@ -14,6 +14,8 @@ import { MenuModule } from 'primeng/menu';
 import {TabMenuModule} from 'primeng/tabmenu';
 import { ReactiveFormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
+import {TooltipModule} from 'primeng/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {InputTextModule} from 'primeng/inputtext';
     TabMenuModule,
     MenuModule,
     ReactiveFormsModule,
-    InputTextModule
+    InputTextModule,
+    TooltipModule
   ],
   exports: [TopbarComponent]
 })

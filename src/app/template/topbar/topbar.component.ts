@@ -43,4 +43,50 @@ export class TopbarComponent implements OnInit {
     });
   }
 
+  logout(){
+    this.apiService.token = '';
+    this.router.navigate(['']);
+  }
+
+  gotoProgram(program){
+    switch(program){
+      case 'home':
+        document.getElementById('home').className = 'selected-menu';
+        document.getElementById('about').className = '';
+        document.getElementById('personnal').className = '';
+        document.getElementById('contact').className = '';
+        document.getElementById('formRegister').className = '';
+      break;
+      case 'about':
+        document.getElementById('home').className = '';
+        document.getElementById('about').className = 'selected-menu';
+        document.getElementById('personnal').className = '';
+        document.getElementById('contact').className = '';
+        document.getElementById('formRegister').className = '';
+      break;
+      case 'personnal':
+        document.getElementById('home').className = '';
+        document.getElementById('about').className = '';
+        document.getElementById('personnal').className = 'selected-menu';
+        document.getElementById('contact').className = '';
+        document.getElementById('formRegister').className = '';
+      break;
+      case 'contact':
+        document.getElementById('home').className = '';
+        document.getElementById('about').className = '';
+        document.getElementById('personnal').className = '';
+        document.getElementById('contact').className = 'selected-menu';
+        document.getElementById('formRegister').className = '';
+      break;
+      case 'formRegister':
+        document.getElementById('home').className = '';
+        document.getElementById('about').className = '';
+        document.getElementById('personnal').className = '';
+        document.getElementById('contact').className = '';
+        document.getElementById('formRegister').className = 'selected-menu';
+      break;
+    }
+    this.apiService.program = program;
+  }
+
 }

@@ -1,10 +1,10 @@
 <div class="p-col-12 topbar">
     <div class="topbar-sub">
-            <div class="p-col-6">
+            <div class="p-col-2">
                 <img src=".\assets\Icon.png" width="70px" style="margin-left: 2%;"/>
             </div>
-            <div [ngSwitch]="stateTopbar" class="p-col-6">
-                <div *ngSwitchCase="'auth'" [formGroup] = "formLogin">
+            <div [ngSwitch]="stateTopbar" class="p-col-10">
+                <div *ngSwitchCase="'auth'" [formGroup] = "formLogin" style="text-align: right;">
                     <input type="text" formControlName = "username" pInputText>
                     &nbsp;
                     <input type="password" formControlName = "password" pInputText>
@@ -12,9 +12,24 @@
                     <button type = "button" (click) = "login()" >Login</button>
                 </div>
                 <div *ngSwitchCase="'kaset'" >
-                    <p>เกษตรอำเภอองครักษ์></p>
-                    <div class="p-col-12 ui-submenu-icon tabManu" style="text-align: center;">
-                        <p-tabMenu [model]="items"></p-tabMenu>
+                    <div class="p-grid">
+                        <div class="p-col-4">
+                            <h1 style="font-size: 30px;">เกษตรอำเภอองครักษ์</h1>
+                        </div>
+                        <div class="p-col-5" style="text-align: right; margin-top: 30px;">
+                            <button  id = "home"  pTooltip="หน้าแรก" tooltipPosition="bottom" (click)="gotoProgram('home')"><i class="pi pi-home" style="font-size: 2em"></i></button>
+                            &nbsp;
+                            <button  id = "about"  pTooltip="เกี่ยวกับ" tooltipPosition="bottom" (click)="gotoProgram('about')"><i class="pi pi-info" style="font-size: 2em"></i></button>
+                            &nbsp;
+                            <button  id = "personnal" pTooltip="บุคลากร" tooltipPosition="bottom" (click)="gotoProgram('personnal')"><i class="pi pi-user" style="font-size: 2em"></i></button>
+                            &nbsp;
+                            <button  id = "contact"  pTooltip="ติดต่อ(แผนที่)" tooltipPosition="bottom" (click)="gotoProgram('contact')"><i class="pi pi-map-marker" style="font-size: 2em"></i></button>
+                            &nbsp;
+                            <button  id = "formRegister"  pTooltip="ฟอร์มการลงทะเบียน" tooltipPosition="bottom" (click)="gotoProgram('formRegister')"><i class="pi pi-file" style="font-size: 2em"></i></button>
+                        </div>
+                        <div div class="p-col-1" style="text-align: right;">
+                            <button  class="button-round" pTooltip="ออกจากระบบ" tooltipPosition="bottom" (click)="logout()"><i class="pi pi-user-minus" style="font-size: 2em"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
