@@ -10,17 +10,10 @@ import { ApiService } from 'src/app/shared/service/api.service';
 })
 export class ProgramComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
-
   constructor(private router: Router,public apiService : ApiService) { }
   display: boolean = false;
 
-  information() {
-    this.router.navigate(['/program']);
-  }
-  showDialog() {
-    this.display = true;
+  ngOnInit(): void {
   }
 
 }

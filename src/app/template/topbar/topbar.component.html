@@ -5,9 +5,9 @@
             </div>
             <div [ngSwitch]="stateTopbar" class="p-col-10">
                 <div *ngSwitchCase="'auth'" [formGroup] = "formLogin" style="text-align: right;">
-                    <input type="text" formControlName = "username" pInputText>
+                    <input type="text" placeholder="รหัสผู้ใช้" formControlName = "username" pInputText>
                     &nbsp;
-                    <input type="password" formControlName = "password" pInputText>
+                    <input type="password" placeholder="รหัสผ่าน" formControlName = "password" pInputText>
                     &nbsp;
                     <button type = "button" (click) = "login()" >Login</button>
                 </div>

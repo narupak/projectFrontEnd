@@ -37,14 +37,14 @@ export class TopbarComponent implements OnInit {
   login(){
     this.apiService.login(this.formLogin.getRawValue()).subscribe((rs : any) =>{
       if(rs.error !== 'Unauthorized'){
-        this.apiService.token = rs.token;
+        localStorage.setItem('access-token', rs.token);
         this.router.navigate(['/webapp']);
       }
     });
   }
 
   logout(){
-    this.apiService.token = '';
+    localStorage.clear();
     this.router.navigate(['']);
   }
 

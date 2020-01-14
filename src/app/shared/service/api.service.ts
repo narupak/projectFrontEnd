@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class ApiService {
@@ -26,5 +26,14 @@ export class ApiService {
 
   login(payload){
     return this.http.post('/api/authenticate' , payload).pipe();
+  }
+
+  getRoleWithToken(token){
+    const payload = {
+      token : localStorage.getItem('access-token')
+    }
+    return this.http.post('/api/getRoleWithToken' , payload , { headers : {
+      'Authorization': `Bearer ${localStorage.getItem('access-token')}`
+    }}).pipe();
   }
 }

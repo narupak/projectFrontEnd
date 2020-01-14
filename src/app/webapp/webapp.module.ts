@@ -15,6 +15,8 @@ import {GalleriaModule} from 'primeng/galleria';
 import { HomeComponent } from './program/home/home.component';
 import { PersonnalComponent } from './program/personnal/personnal.component';
 import { RegisterFormComponent } from './program/register-form/register-form.component';
+import { PostFormComponent } from './program/home/post-form/post-form.component';
+import { ApiService } from '../shared/service/api.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { RegisterFormComponent } from './program/register-form/register-form.com
     ContactComponent,
     HomeComponent,
     PersonnalComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    PostFormComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { RegisterFormComponent } from './program/register-form/register-form.com
     ScrollPanelModule,
     CardModule,
     GalleriaModule
-  ]
+  ],
+  providers : [ApiService]
 })
 export class WebappModule {}
